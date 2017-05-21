@@ -1,0 +1,747 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 20.00      0.08     0.08     1256     0.06     0.12  imDilata(Imagem const&, Estruturante const&)
+ 17.50      0.15     0.07    11786     0.01     0.01  Imagem::Imagem(int const&, int const&, int const&, int const&, int const&)
+ 10.00      0.19     0.04     5203     0.01     0.01  imArea(Imagem const&)
+  7.50      0.22     0.03   250738     0.00     0.00  MaxTree::vizinhos(Fila*)
+  7.50      0.25     0.03     1157     0.03     0.03  Imagem::operator=(Imagem const&)
+  5.00      0.27     0.02 12717000     0.00     0.00  Estruturante::vizY(int const&)
+  5.00      0.29     0.02     1256     0.02     0.02  imNega(Imagem const&)
+  5.00      0.31     0.02      627     0.03     0.04  imCentroide(Imagem const&)
+  2.50      0.32     0.01 12741658     0.00     0.00  Pontos::getX(int const&)
+  2.50      0.33     0.01 12741658     0.00     0.00  Pontos::getY(int const&)
+  2.50      0.34     0.01  4296602     0.00     0.00  Vizinhanca::getX()
+  2.50      0.35     0.01  4296602     0.00     0.00  Vizinhanca::getY()
+  2.50      0.36     0.01  3987146     0.00     0.00  Fila::getPx()
+  2.50      0.37     0.01     1255     0.01     0.02  imNaozero(Imagem const&)
+  2.50      0.38     0.01      807     0.01     0.01  Imagem::zera()
+  2.50      0.39     0.01      807     0.01     0.09  MaxTree::retornaRegiao(int, int, Imagem*)
+  2.50      0.40     0.01      578     0.02     0.02  imUniao(Imagem const&, Imagem const&)
+  0.00      0.40     0.00 12717000     0.00     0.00  Estruturante::vizX(int const&)
+  0.00      0.40     0.00  3987146     0.00     0.00  Fila::getPy()
+  0.00      0.40     0.00  1974492     0.00     0.00  Vizinhanca::inserir(int, int)
+  0.00      0.40     0.00   563583     0.00     0.00  ListaFila::getNivel()
+  0.00      0.40     0.00   250738     0.00     0.00  Fila::inserir(int, int, int)
+  0.00      0.40     0.00   247363     0.00     0.00  Pilha::inserirNaPilha(int, int, int)
+  0.00      0.40     0.00   247363     0.00     0.00  Pilha::removerDaPilha()
+  0.00      0.40     0.00   247363     0.00     0.00  Pilha::getPx()
+  0.00      0.40     0.00   247363     0.00     0.00  Pilha::getPy()
+  0.00      0.40     0.00    46740     0.00     0.00  Pontos::insere(int const&, int const&)
+  0.00      0.40     0.00     8646     0.00     0.00  Imagem::~Imagem()
+  0.00      0.40     0.00     4926     0.00     0.01  imZeros(int const&, int const&, int const&, int const&)
+  0.00      0.40     0.00     4396     0.00     0.00  Pontos::Pontos(int const&)
+  0.00      0.40     0.00     4181     0.00     0.00  ListaFila::primeiroDaFila(int)
+  0.00      0.40     0.00     3375     0.00     0.00  Fila::removeDaFila()
+  0.00      0.40     0.00     3375     0.00     0.00  Fila::setPx(int)
+  0.00      0.40     0.00     3375     0.00     0.00  Fila::setPy(int)
+  0.00      0.40     0.00     3375     0.00     0.00  Fila::getNivel()
+  0.00      0.40     0.00     3375     0.00     0.00  Fila::setNivel(int)
+  0.00      0.40     0.00     3375     0.00     0.00  ListaFila::inserir(int, int, int, int)
+  0.00      0.40     0.00     3141     0.00     0.01  Estruturante::imagem(Imagem const&)
+  0.00      0.40     0.00     2419     0.00     0.00  ehVaziaANE(ANE*)
+  0.00      0.40     0.00     2192     0.00     0.00  Grafo::getNivel()
+  0.00      0.40     0.00     1884     0.00     0.02  eeReflete(Estruturante const&)
+  0.00      0.40     0.00     1884     0.00     0.00  Estruturante::destroi()
+  0.00      0.40     0.00     1884     0.00     0.01  Estruturante::Estruturante(Imagem const&)
+  0.00      0.40     0.00     1614     0.00     0.00  Grafo::getRotulo()
+  0.00      0.40     0.00     1612     0.00     0.00  buscaANE(ANE*, int, Registro*, int*)
+  0.00      0.40     0.00     1612     0.00     0.00  Grafo::buscar(int, int, ANE**)
+  0.00      0.40     0.00     1257     0.00     0.02  Estruturante::Estruturante(char*, int const&)
+  0.00      0.40     0.00     1256     0.00     0.02  eeCruz(int const&)
+  0.00      0.40     0.00     1255     0.00     0.00  Pontos::~Pontos()
+  0.00      0.40     0.00      807     0.00     0.00  criaNoANE(Registro)
+  0.00      0.40     0.00      807     0.00     0.00  insereANE(ANE*, Registro, int*)
+  0.00      0.40     0.00      807     0.00     0.00  Grafo::inserirNovo(int, int, ANE**)
+  0.00      0.40     0.00      807     0.00     0.00  Grafo::isOn()
+  0.00      0.40     0.00      807     0.00     0.00  Grafo::inserir(Grafo*, ANE**)
+  0.00      0.40     0.00      807     0.00     0.00  Grafo::Grafo()
+  0.00      0.40     0.00      807     0.00     0.00  PilhaNo::desempilha(Grafo**)
+  0.00      0.40     0.00      807     0.00     0.00  PilhaNo::empilhaFilhos(Grafo*)
+  0.00      0.40     0.00      807     0.00     0.00  PilhaNo::empilha(Grafo*)
+  0.00      0.40     0.00      806     0.00     0.00  Grafo::inserir(int, int, int, int, ANE**)
+  0.00      0.40     0.00      628     0.00     0.31  imGradiente(Imagem const&, Estruturante const&, Estruturante const&)
+  0.00      0.40     0.00      628     0.00     0.18  imErode(Imagem const&, Estruturante const&)
+  0.00      0.40     0.00      628     0.00     0.42  isCircle(Imagem const&, int, int)
+  0.00      0.40     0.00      628     0.00     0.01  imSubtrai(Imagem const&, Imagem const&)
+  0.00      0.40     0.00      578     0.00     0.01  imConstante(int const&, int const&, int const&, int const&, int const&)
+  0.00      0.40     0.00      578     0.00     0.01  imMultiplica(Imagem const&, int const&)
+  0.00      0.40     0.00      578     0.00     0.01  imMultiplica(Imagem const&, Imagem const&)
+  0.00      0.40     0.00      257     0.00     0.00  criaANE()
+  0.00      0.40     0.00      229     0.00     0.00  Grafo::setOff()
+  0.00      0.40     0.00      167     0.00     0.00  ListaFila::inserirNovo(int, int, int, int)
+  0.00      0.40     0.00       63     0.00     0.00  Grafo::getOrdem()
+  0.00      0.40     0.00        2     0.00     0.00  MaxTree::retornaAltura()
+  0.00      0.40     0.00        2     0.00     0.00  MaxTree::retornaLargura()
+  0.00      0.40     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z18filterSalientPeaksP7MaxTree
+  0.00      0.40     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z3sqri
+  0.00      0.40     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z4kmaxP7MaxTreeiiiii
+  0.00      0.40     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z7criaANEv
+  0.00      0.40     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z8eeImagemRK6Imagem
+  0.00      0.40     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z8img2treeRK6ImagemRK12Estruturante
+  0.00      0.40     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
+  0.00      0.40     0.00        1     0.00     0.01  imNormaliza(Imagem const&, int const&, int const&)
+  0.00      0.40     0.00        1     0.00   399.32  searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int))
+  0.00      0.40     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.40     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.40     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.40     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.40     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.40     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.40     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.40     0.00        1     0.00     0.00  imLe(char*)
+  0.00      0.40     0.00        1     0.00     0.02  eeCaixa(int const&)
+  0.00      0.40     0.00        1     0.00     0.00  imMaximo(Imagem const&)
+  0.00      0.40     0.00        1     0.00     0.00  imMinimo(Imagem const&)
+  0.00      0.40     0.00        1     0.00     0.72  img2tree(Imagem const&, Estruturante const&)
+  0.00      0.40     0.00        1     0.00     0.00  Imagem::escreve(char*)
+  0.00      0.40     0.00        1     0.00     0.00  Imagem::comoCinza()
+  0.00      0.40     0.00        1     0.00     0.00  Imagem::Imagem(char*)
+  0.00      0.40     0.00        1     0.00     0.72  MaxTree::flood(int)
+  0.00      0.40     0.00        1     0.00     0.72  MaxTree::MaxTree(int**, int, int, Imagem const&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 2.50% of 0.40 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.40                 main [1]
+                0.00    0.40       1/1           searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+                0.00    0.00       1/1           img2tree(Imagem const&, Estruturante const&) [34]
+                0.00    0.00       1/1157        Imagem::operator=(Imagem const&) [13]
+                0.00    0.00       1/1           eeCaixa(int const&) [37]
+                0.00    0.00       1/1           imNormaliza(Imagem const&, int const&, int const&) [39]
+                0.00    0.00       3/8646        Imagem::~Imagem() [55]
+                0.00    0.00       1/1           imLe(char*) [100]
+                0.00    0.00       1/1           Imagem::comoCinza() [104]
+                0.00    0.00       1/1           Imagem::escreve(char*) [103]
+-----------------------------------------------
+                0.00    0.40       1/1           main [1]
+[2]     99.8    0.00    0.40       1         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+                0.00    0.26     628/628         isCircle(Imagem const&, int, int) [3]
+                0.01    0.06     807/807         MaxTree::retornaRegiao(int, int, Imagem*) [8]
+                0.03    0.00    1156/1157        Imagem::operator=(Imagem const&) [13]
+                0.01    0.00     578/578         imUniao(Imagem const&, Imagem const&) [22]
+                0.01    0.00     807/807         Imagem::zera() [28]
+                0.00    0.01     578/578         imMultiplica(Imagem const&, int const&) [30]
+                0.01    0.00     807/5203        imArea(Imagem const&) [10]
+                0.00    0.00       2/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+                0.00    0.00    1385/2192        Grafo::getNivel() [64]
+                0.00    0.00    1157/8646        Imagem::~Imagem() [55]
+                0.00    0.00     807/807         PilhaNo::desempilha(Grafo**) [76]
+                0.00    0.00     807/807         Grafo::isOn() [73]
+                0.00    0.00     807/1614        Grafo::getRotulo() [66]
+                0.00    0.00     807/807         PilhaNo::empilhaFilhos(Grafo*) [77]
+                0.00    0.00     229/229         Grafo::setOff() [81]
+                0.00    0.00       2/2           MaxTree::retornaLargura() [85]
+                0.00    0.00       2/2           MaxTree::retornaAltura() [84]
+                0.00    0.00       1/807         PilhaNo::empilha(Grafo*) [78]
+-----------------------------------------------
+                0.00    0.26     628/628         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[3]     65.9    0.00    0.26     628         isCircle(Imagem const&, int, int) [3]
+                0.00    0.20     628/628         imGradiente(Imagem const&, Estruturante const&, Estruturante const&) [4]
+                0.00    0.02    1256/1256        eeCruz(int const&) [19]
+                0.02    0.00     627/627         imCentroide(Imagem const&) [20]
+                0.01    0.01    1255/1255        imNaozero(Imagem const&) [21]
+                0.00    0.00   24658/12741658     Pontos::getX(int const&) [23]
+                0.00    0.00   24658/12741658     Pontos::getY(int const&) [24]
+                0.00    0.00    1255/8646        Imagem::~Imagem() [55]
+                0.00    0.00    1255/1255        Pontos::~Pontos() [69]
+-----------------------------------------------
+                0.00    0.20     628/628         isCircle(Imagem const&, int, int) [3]
+[4]     48.9    0.00    0.20     628         imGradiente(Imagem const&, Estruturante const&, Estruturante const&) [4]
+                0.00    0.12     628/628         imErode(Imagem const&, Estruturante const&) [6]
+                0.04    0.04     628/1256        imDilata(Imagem const&, Estruturante const&) [5]
+                0.00    0.00     628/628         imSubtrai(Imagem const&, Imagem const&) [31]
+                0.00    0.00    1256/8646        Imagem::~Imagem() [55]
+-----------------------------------------------
+                0.04    0.04     628/1256        imErode(Imagem const&, Estruturante const&) [6]
+                0.04    0.04     628/1256        imGradiente(Imagem const&, Estruturante const&, Estruturante const&) [4]
+[5]     38.0    0.08    0.07    1256         imDilata(Imagem const&, Estruturante const&) [5]
+                0.02    0.01 12717000/12717000     Estruturante::vizY(int const&) [14]
+                0.00    0.02    1256/1884        eeReflete(Estruturante const&) [12]
+                0.00    0.01 12717000/12717000     Estruturante::vizX(int const&) [29]
+                0.00    0.01    1256/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+                0.00    0.00    1256/1884        Estruturante::destroi() [65]
+-----------------------------------------------
+                0.00    0.12     628/628         imGradiente(Imagem const&, Estruturante const&, Estruturante const&) [4]
+[6]     28.9    0.00    0.12     628         imErode(Imagem const&, Estruturante const&) [6]
+                0.04    0.04     628/1256        imDilata(Imagem const&, Estruturante const&) [5]
+                0.02    0.01    1256/1256        imNega(Imagem const&) [16]
+                0.00    0.01     628/1884        eeReflete(Estruturante const&) [12]
+                0.00    0.00    1256/8646        Imagem::~Imagem() [55]
+                0.00    0.00     628/1884        Estruturante::destroi() [65]
+-----------------------------------------------
+                0.00    0.00     578/11786       imConstante(int const&, int const&, int const&, int const&, int const&) [32]
+                0.01    0.00    1257/11786       Estruturante::Estruturante(char*, int const&) [18]
+                0.01    0.00    1884/11786       eeReflete(Estruturante const&) [12]
+                0.02    0.00    3141/11786       Estruturante::imagem(Imagem const&) [9]
+                0.03    0.00    4926/11786       imZeros(int const&, int const&, int const&, int const&) [15]
+[7]     17.5    0.07    0.00   11786         Imagem::Imagem(int const&, int const&, int const&, int const&, int const&) [7]
+-----------------------------------------------
+                0.01    0.06     807/807         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[8]     17.3    0.01    0.06     807         MaxTree::retornaRegiao(int, int, Imagem*) [8]
+                0.03    0.01  247363/250738      MaxTree::vizinhos(Fila*) [11]
+                0.01    0.00 4260196/4296602     Vizinhanca::getX() [25]
+                0.01    0.00 4260196/4296602     Vizinhanca::getY() [26]
+                0.00    0.00  247363/247363      Pilha::inserirNaPilha(int, int, int) [50]
+                0.00    0.00  247363/247363      Pilha::getPy() [53]
+                0.00    0.00  247363/247363      Pilha::getPx() [52]
+                0.00    0.00  247363/250738      Fila::inserir(int, int, int) [49]
+                0.00    0.00  247363/247363      Pilha::removerDaPilha() [51]
+-----------------------------------------------
+                0.00    0.02    1257/3141        Estruturante::Estruturante(char*, int const&) [18]
+                0.00    0.03    1884/3141        Estruturante::Estruturante(Imagem const&) [17]
+[9]     10.7    0.00    0.04    3141         Estruturante::imagem(Imagem const&) [9]
+                0.02    0.00    3141/5203        imArea(Imagem const&) [10]
+                0.02    0.00    3141/11786       Imagem::Imagem(int const&, int const&, int const&, int const&, int const&) [7]
+                0.00    0.00   10685/46740       Pontos::insere(int const&, int const&) [54]
+                0.00    0.00    3141/4396        Pontos::Pontos(int const&) [56]
+-----------------------------------------------
+                0.01    0.00     807/5203        searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+                0.01    0.00    1255/5203        imNaozero(Imagem const&) [21]
+                0.02    0.00    3141/5203        Estruturante::imagem(Imagem const&) [9]
+[10]    10.0    0.04    0.00    5203         imArea(Imagem const&) [10]
+-----------------------------------------------
+                0.00    0.00    3375/250738      MaxTree::flood(int) [35]
+                0.03    0.01  247363/250738      MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[11]    10.0    0.03    0.01  250738         MaxTree::vizinhos(Fila*) [11]
+                0.01    0.00 3980396/3987146     Fila::getPx() [27]
+                0.00    0.00 3980396/3987146     Fila::getPy() [46]
+                0.00    0.00 1974492/1974492     Vizinhanca::inserir(int, int) [47]
+-----------------------------------------------
+                0.00    0.01     628/1884        imErode(Imagem const&, Estruturante const&) [6]
+                0.00    0.02    1256/1884        imDilata(Imagem const&, Estruturante const&) [5]
+[12]     9.2    0.00    0.04    1884         eeReflete(Estruturante const&) [12]
+                0.00    0.03    1884/1884        Estruturante::Estruturante(Imagem const&) [17]
+                0.01    0.00    1884/11786       Imagem::Imagem(int const&, int const&, int const&, int const&, int const&) [7]
+                0.00    0.00    1884/8646        Imagem::~Imagem() [55]
+-----------------------------------------------
+                0.00    0.00       1/1157        main [1]
+                0.03    0.00    1156/1157        searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[13]     7.5    0.03    0.00    1157         Imagem::operator=(Imagem const&) [13]
+-----------------------------------------------
+                0.02    0.01 12717000/12717000     imDilata(Imagem const&, Estruturante const&) [5]
+[14]     7.5    0.02    0.01 12717000         Estruturante::vizY(int const&) [14]
+                0.01    0.00 12717000/12741658     Pontos::getY(int const&) [24]
+-----------------------------------------------
+                0.00    0.00       1/4926        imNormaliza(Imagem const&, int const&, int const&) [39]
+                0.00    0.00       2/4926        searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+                0.00    0.00     578/4926        imMultiplica(Imagem const&, Imagem const&) [33]
+                0.00    0.00     578/4926        imUniao(Imagem const&, Imagem const&) [22]
+                0.00    0.00     627/4926        imCentroide(Imagem const&) [20]
+                0.00    0.00     628/4926        imSubtrai(Imagem const&, Imagem const&) [31]
+                0.00    0.01    1256/4926        imNega(Imagem const&) [16]
+                0.00    0.01    1256/4926        imDilata(Imagem const&, Estruturante const&) [5]
+[15]     7.3    0.00    0.03    4926         imZeros(int const&, int const&, int const&, int const&) [15]
+                0.03    0.00    4926/11786       Imagem::Imagem(int const&, int const&, int const&, int const&, int const&) [7]
+-----------------------------------------------
+                0.02    0.01    1256/1256        imErode(Imagem const&, Estruturante const&) [6]
+[16]     6.9    0.02    0.01    1256         imNega(Imagem const&) [16]
+                0.00    0.01    1256/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+-----------------------------------------------
+                0.00    0.03    1884/1884        eeReflete(Estruturante const&) [12]
+[17]     6.4    0.00    0.03    1884         Estruturante::Estruturante(Imagem const&) [17]
+                0.00    0.03    1884/3141        Estruturante::imagem(Imagem const&) [9]
+-----------------------------------------------
+                0.00    0.00       1/1257        eeCaixa(int const&) [37]
+                0.00    0.02    1256/1257        eeCruz(int const&) [19]
+[18]     6.1    0.00    0.02    1257         Estruturante::Estruturante(char*, int const&) [18]
+                0.00    0.02    1257/3141        Estruturante::imagem(Imagem const&) [9]
+                0.01    0.00    1257/11786       Imagem::Imagem(int const&, int const&, int const&, int const&, int const&) [7]
+                0.00    0.00    1257/8646        Imagem::~Imagem() [55]
+-----------------------------------------------
+                0.00    0.02    1256/1256        isCircle(Imagem const&, int, int) [3]
+[19]     6.1    0.00    0.02    1256         eeCruz(int const&) [19]
+                0.00    0.02    1256/1257        Estruturante::Estruturante(char*, int const&) [18]
+-----------------------------------------------
+                0.02    0.00     627/627         isCircle(Imagem const&, int, int) [3]
+[20]     5.9    0.02    0.00     627         imCentroide(Imagem const&) [20]
+                0.00    0.00     627/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+-----------------------------------------------
+                0.01    0.01    1255/1255        isCircle(Imagem const&, int, int) [3]
+[21]     4.9    0.01    0.01    1255         imNaozero(Imagem const&) [21]
+                0.01    0.00    1255/5203        imArea(Imagem const&) [10]
+                0.00    0.00   36055/46740       Pontos::insere(int const&, int const&) [54]
+                0.00    0.00    1255/4396        Pontos::Pontos(int const&) [56]
+-----------------------------------------------
+                0.01    0.00     578/578         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[22]     3.4    0.01    0.00     578         imUniao(Imagem const&, Imagem const&) [22]
+                0.00    0.00     578/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+-----------------------------------------------
+                0.00    0.00   24658/12741658     isCircle(Imagem const&, int, int) [3]
+                0.01    0.00 12717000/12741658     Estruturante::vizX(int const&) [29]
+[23]     2.5    0.01    0.00 12741658         Pontos::getX(int const&) [23]
+-----------------------------------------------
+                0.00    0.00   24658/12741658     isCircle(Imagem const&, int, int) [3]
+                0.01    0.00 12717000/12741658     Estruturante::vizY(int const&) [14]
+[24]     2.5    0.01    0.00 12741658         Pontos::getY(int const&) [24]
+-----------------------------------------------
+                0.00    0.00   36406/4296602     MaxTree::flood(int) [35]
+                0.01    0.00 4260196/4296602     MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[25]     2.5    0.01    0.00 4296602         Vizinhanca::getX() [25]
+-----------------------------------------------
+                0.00    0.00   36406/4296602     MaxTree::flood(int) [35]
+                0.01    0.00 4260196/4296602     MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[26]     2.5    0.01    0.00 4296602         Vizinhanca::getY() [26]
+-----------------------------------------------
+                0.00    0.00    3375/3987146     ListaFila::primeiroDaFila(int) [38]
+                0.00    0.00    3375/3987146     MaxTree::flood(int) [35]
+                0.01    0.00 3980396/3987146     MaxTree::vizinhos(Fila*) [11]
+[27]     2.5    0.01    0.00 3987146         Fila::getPx() [27]
+-----------------------------------------------
+                0.01    0.00     807/807         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[28]     2.5    0.01    0.00     807         Imagem::zera() [28]
+-----------------------------------------------
+                0.00    0.01 12717000/12717000     imDilata(Imagem const&, Estruturante const&) [5]
+[29]     2.5    0.00    0.01 12717000         Estruturante::vizX(int const&) [29]
+                0.01    0.00 12717000/12741658     Pontos::getX(int const&) [23]
+-----------------------------------------------
+                0.00    0.01     578/578         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[30]     1.7    0.00    0.01     578         imMultiplica(Imagem const&, int const&) [30]
+                0.00    0.00     578/578         imConstante(int const&, int const&, int const&, int const&, int const&) [32]
+                0.00    0.00     578/578         imMultiplica(Imagem const&, Imagem const&) [33]
+                0.00    0.00     578/8646        Imagem::~Imagem() [55]
+-----------------------------------------------
+                0.00    0.00     628/628         imGradiente(Imagem const&, Estruturante const&, Estruturante const&) [4]
+[31]     0.9    0.00    0.00     628         imSubtrai(Imagem const&, Imagem const&) [31]
+                0.00    0.00     628/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+-----------------------------------------------
+                0.00    0.00     578/578         imMultiplica(Imagem const&, int const&) [30]
+[32]     0.9    0.00    0.00     578         imConstante(int const&, int const&, int const&, int const&, int const&) [32]
+                0.00    0.00     578/11786       Imagem::Imagem(int const&, int const&, int const&, int const&, int const&) [7]
+-----------------------------------------------
+                0.00    0.00     578/578         imMultiplica(Imagem const&, int const&) [30]
+[33]     0.9    0.00    0.00     578         imMultiplica(Imagem const&, Imagem const&) [33]
+                0.00    0.00     578/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[34]     0.2    0.00    0.00       1         img2tree(Imagem const&, Estruturante const&) [34]
+                0.00    0.00       1/1           MaxTree::MaxTree(int**, int, int, Imagem const&) [36]
+-----------------------------------------------
+                                 805             MaxTree::flood(int) [35]
+                0.00    0.00       1/1           MaxTree::MaxTree(int**, int, int, Imagem const&) [36]
+[35]     0.2    0.00    0.00       1+805     MaxTree::flood(int) [35]
+                0.00    0.00    3375/250738      MaxTree::vizinhos(Fila*) [11]
+                0.00    0.00   36406/4296602     Vizinhanca::getX() [25]
+                0.00    0.00   36406/4296602     Vizinhanca::getY() [26]
+                0.00    0.00    4181/4181        ListaFila::primeiroDaFila(int) [38]
+                0.00    0.00    3375/3987146     Fila::getPx() [27]
+                0.00    0.00    3375/3987146     Fila::getPy() [46]
+                0.00    0.00    3374/3375        ListaFila::inserir(int, int, int, int) [62]
+                0.00    0.00     806/806         Grafo::inserir(int, int, int, int, ANE**) [79]
+                0.00    0.00      63/63          Grafo::getOrdem() [83]
+                                 805             MaxTree::flood(int) [35]
+-----------------------------------------------
+                0.00    0.00       1/1           img2tree(Imagem const&, Estruturante const&) [34]
+[36]     0.2    0.00    0.00       1         MaxTree::MaxTree(int**, int, int, Imagem const&) [36]
+                0.00    0.00       1/1           MaxTree::flood(int) [35]
+                0.00    0.00     257/257         criaANE() [80]
+                0.00    0.00       1/3375        ListaFila::inserir(int, int, int, int) [62]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[37]     0.0    0.00    0.00       1         eeCaixa(int const&) [37]
+                0.00    0.00       1/1257        Estruturante::Estruturante(char*, int const&) [18]
+-----------------------------------------------
+                0.00    0.00    4181/4181        MaxTree::flood(int) [35]
+[38]     0.0    0.00    0.00    4181         ListaFila::primeiroDaFila(int) [38]
+                0.00    0.00    3375/3987146     Fila::getPx() [27]
+                0.00    0.00  340157/563583      ListaFila::getNivel() [48]
+                0.00    0.00    3375/3375        Fila::getNivel() [60]
+                0.00    0.00    3375/3375        Fila::setNivel(int) [61]
+                0.00    0.00    3375/3375        Fila::setPx(int) [58]
+                0.00    0.00    3375/3987146     Fila::getPy() [46]
+                0.00    0.00    3375/3375        Fila::setPy(int) [59]
+                0.00    0.00    3375/3375        Fila::removeDaFila() [57]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[39]     0.0    0.00    0.00       1         imNormaliza(Imagem const&, int const&, int const&) [39]
+                0.00    0.00       1/4926        imZeros(int const&, int const&, int const&, int const&) [15]
+                0.00    0.00       1/1           imMinimo(Imagem const&) [102]
+                0.00    0.00       1/1           imMaximo(Imagem const&) [101]
+-----------------------------------------------
+                0.00    0.00    3375/3987146     ListaFila::primeiroDaFila(int) [38]
+                0.00    0.00    3375/3987146     MaxTree::flood(int) [35]
+                0.00    0.00 3980396/3987146     MaxTree::vizinhos(Fila*) [11]
+[46]     0.0    0.00    0.00 3987146         Fila::getPy() [46]
+-----------------------------------------------
+                0.00    0.00 1974492/1974492     MaxTree::vizinhos(Fila*) [11]
+[47]     0.0    0.00    0.00 1974492         Vizinhanca::inserir(int, int) [47]
+-----------------------------------------------
+                0.00    0.00  223426/563583      ListaFila::inserir(int, int, int, int) [62]
+                0.00    0.00  340157/563583      ListaFila::primeiroDaFila(int) [38]
+[48]     0.0    0.00    0.00  563583         ListaFila::getNivel() [48]
+-----------------------------------------------
+                0.00    0.00     167/250738      ListaFila::inserirNovo(int, int, int, int) [82]
+                0.00    0.00    3208/250738      ListaFila::inserir(int, int, int, int) [62]
+                0.00    0.00  247363/250738      MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[49]     0.0    0.00    0.00  250738         Fila::inserir(int, int, int) [49]
+-----------------------------------------------
+                0.00    0.00  247363/247363      MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[50]     0.0    0.00    0.00  247363         Pilha::inserirNaPilha(int, int, int) [50]
+-----------------------------------------------
+                0.00    0.00  247363/247363      MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[51]     0.0    0.00    0.00  247363         Pilha::removerDaPilha() [51]
+-----------------------------------------------
+                0.00    0.00  247363/247363      MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[52]     0.0    0.00    0.00  247363         Pilha::getPx() [52]
+-----------------------------------------------
+                0.00    0.00  247363/247363      MaxTree::retornaRegiao(int, int, Imagem*) [8]
+[53]     0.0    0.00    0.00  247363         Pilha::getPy() [53]
+-----------------------------------------------
+                0.00    0.00   10685/46740       Estruturante::imagem(Imagem const&) [9]
+                0.00    0.00   36055/46740       imNaozero(Imagem const&) [21]
+[54]     0.0    0.00    0.00   46740         Pontos::insere(int const&, int const&) [54]
+-----------------------------------------------
+                0.00    0.00       3/8646        main [1]
+                0.00    0.00     578/8646        imMultiplica(Imagem const&, int const&) [30]
+                0.00    0.00    1157/8646        searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+                0.00    0.00    1255/8646        isCircle(Imagem const&, int, int) [3]
+                0.00    0.00    1256/8646        imErode(Imagem const&, Estruturante const&) [6]
+                0.00    0.00    1256/8646        imGradiente(Imagem const&, Estruturante const&, Estruturante const&) [4]
+                0.00    0.00    1257/8646        Estruturante::Estruturante(char*, int const&) [18]
+                0.00    0.00    1884/8646        eeReflete(Estruturante const&) [12]
+[55]     0.0    0.00    0.00    8646         Imagem::~Imagem() [55]
+-----------------------------------------------
+                0.00    0.00    1255/4396        imNaozero(Imagem const&) [21]
+                0.00    0.00    3141/4396        Estruturante::imagem(Imagem const&) [9]
+[56]     0.0    0.00    0.00    4396         Pontos::Pontos(int const&) [56]
+-----------------------------------------------
+                0.00    0.00    3375/3375        ListaFila::primeiroDaFila(int) [38]
+[57]     0.0    0.00    0.00    3375         Fila::removeDaFila() [57]
+-----------------------------------------------
+                0.00    0.00    3375/3375        ListaFila::primeiroDaFila(int) [38]
+[58]     0.0    0.00    0.00    3375         Fila::setPx(int) [58]
+-----------------------------------------------
+                0.00    0.00    3375/3375        ListaFila::primeiroDaFila(int) [38]
+[59]     0.0    0.00    0.00    3375         Fila::setPy(int) [59]
+-----------------------------------------------
+                0.00    0.00    3375/3375        ListaFila::primeiroDaFila(int) [38]
+[60]     0.0    0.00    0.00    3375         Fila::getNivel() [60]
+-----------------------------------------------
+                0.00    0.00    3375/3375        ListaFila::primeiroDaFila(int) [38]
+[61]     0.0    0.00    0.00    3375         Fila::setNivel(int) [61]
+-----------------------------------------------
+                0.00    0.00       1/3375        MaxTree::MaxTree(int**, int, int, Imagem const&) [36]
+                0.00    0.00    3374/3375        MaxTree::flood(int) [35]
+[62]     0.0    0.00    0.00    3375         ListaFila::inserir(int, int, int, int) [62]
+                0.00    0.00  223426/563583      ListaFila::getNivel() [48]
+                0.00    0.00    3208/250738      Fila::inserir(int, int, int) [49]
+                0.00    0.00     167/167         ListaFila::inserirNovo(int, int, int, int) [82]
+-----------------------------------------------
+                0.00    0.00     807/2419        insereANE(ANE*, Registro, int*) [71]
+                0.00    0.00    1612/2419        buscaANE(ANE*, int, Registro*, int*) [67]
+[63]     0.0    0.00    0.00    2419         ehVaziaANE(ANE*) [63]
+-----------------------------------------------
+                0.00    0.00     807/2192        Grafo::inserir(Grafo*, ANE**) [74]
+                0.00    0.00    1385/2192        searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[64]     0.0    0.00    0.00    2192         Grafo::getNivel() [64]
+-----------------------------------------------
+                0.00    0.00     628/1884        imErode(Imagem const&, Estruturante const&) [6]
+                0.00    0.00    1256/1884        imDilata(Imagem const&, Estruturante const&) [5]
+[65]     0.0    0.00    0.00    1884         Estruturante::destroi() [65]
+-----------------------------------------------
+                0.00    0.00     807/1614        Grafo::inserir(Grafo*, ANE**) [74]
+                0.00    0.00     807/1614        searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[66]     0.0    0.00    0.00    1614         Grafo::getRotulo() [66]
+-----------------------------------------------
+                0.00    0.00    1612/1612        Grafo::buscar(int, int, ANE**) [68]
+[67]     0.0    0.00    0.00    1612         buscaANE(ANE*, int, Registro*, int*) [67]
+                0.00    0.00    1612/2419        ehVaziaANE(ANE*) [63]
+-----------------------------------------------
+                0.00    0.00    1612/1612        Grafo::inserir(int, int, int, int, ANE**) [79]
+[68]     0.0    0.00    0.00    1612         Grafo::buscar(int, int, ANE**) [68]
+                0.00    0.00    1612/1612        buscaANE(ANE*, int, Registro*, int*) [67]
+-----------------------------------------------
+                0.00    0.00    1255/1255        isCircle(Imagem const&, int, int) [3]
+[69]     0.0    0.00    0.00    1255         Pontos::~Pontos() [69]
+-----------------------------------------------
+                0.00    0.00     807/807         insereANE(ANE*, Registro, int*) [71]
+[70]     0.0    0.00    0.00     807         criaNoANE(Registro) [70]
+-----------------------------------------------
+                0.00    0.00     807/807         Grafo::inserir(Grafo*, ANE**) [74]
+[71]     0.0    0.00    0.00     807         insereANE(ANE*, Registro, int*) [71]
+                0.00    0.00     807/2419        ehVaziaANE(ANE*) [63]
+                0.00    0.00     807/807         criaNoANE(Registro) [70]
+-----------------------------------------------
+                0.00    0.00     807/807         Grafo::inserir(int, int, int, int, ANE**) [79]
+[72]     0.0    0.00    0.00     807         Grafo::inserirNovo(int, int, ANE**) [72]
+                0.00    0.00     807/807         Grafo::Grafo() [75]
+                0.00    0.00     807/807         Grafo::inserir(Grafo*, ANE**) [74]
+-----------------------------------------------
+                0.00    0.00     807/807         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[73]     0.0    0.00    0.00     807         Grafo::isOn() [73]
+-----------------------------------------------
+                0.00    0.00     807/807         Grafo::inserirNovo(int, int, ANE**) [72]
+[74]     0.0    0.00    0.00     807         Grafo::inserir(Grafo*, ANE**) [74]
+                0.00    0.00     807/1614        Grafo::getRotulo() [66]
+                0.00    0.00     807/2192        Grafo::getNivel() [64]
+                0.00    0.00     807/807         insereANE(ANE*, Registro, int*) [71]
+-----------------------------------------------
+                0.00    0.00     807/807         Grafo::inserirNovo(int, int, ANE**) [72]
+[75]     0.0    0.00    0.00     807         Grafo::Grafo() [75]
+-----------------------------------------------
+                0.00    0.00     807/807         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[76]     0.0    0.00    0.00     807         PilhaNo::desempilha(Grafo**) [76]
+-----------------------------------------------
+                0.00    0.00     807/807         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[77]     0.0    0.00    0.00     807         PilhaNo::empilhaFilhos(Grafo*) [77]
+                0.00    0.00     806/807         PilhaNo::empilha(Grafo*) [78]
+-----------------------------------------------
+                0.00    0.00       1/807         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+                0.00    0.00     806/807         PilhaNo::empilhaFilhos(Grafo*) [77]
+[78]     0.0    0.00    0.00     807         PilhaNo::empilha(Grafo*) [78]
+-----------------------------------------------
+                0.00    0.00     806/806         MaxTree::flood(int) [35]
+[79]     0.0    0.00    0.00     806         Grafo::inserir(int, int, int, int, ANE**) [79]
+                0.00    0.00    1612/1612        Grafo::buscar(int, int, ANE**) [68]
+                0.00    0.00     807/807         Grafo::inserirNovo(int, int, ANE**) [72]
+-----------------------------------------------
+                0.00    0.00     257/257         MaxTree::MaxTree(int**, int, int, Imagem const&) [36]
+[80]     0.0    0.00    0.00     257         criaANE() [80]
+-----------------------------------------------
+                0.00    0.00     229/229         searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[81]     0.0    0.00    0.00     229         Grafo::setOff() [81]
+-----------------------------------------------
+                0.00    0.00     167/167         ListaFila::inserir(int, int, int, int) [62]
+[82]     0.0    0.00    0.00     167         ListaFila::inserirNovo(int, int, int, int) [82]
+                0.00    0.00     167/250738      Fila::inserir(int, int, int) [49]
+-----------------------------------------------
+                0.00    0.00      63/63          MaxTree::flood(int) [35]
+[83]     0.0    0.00    0.00      63         Grafo::getOrdem() [83]
+-----------------------------------------------
+                0.00    0.00       2/2           searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[84]     0.0    0.00    0.00       2         MaxTree::retornaAltura() [84]
+-----------------------------------------------
+                0.00    0.00       2/2           searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [2]
+[85]     0.0    0.00    0.00       2         MaxTree::retornaLargura() [85]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [163]
+[86]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z18filterSalientPeaksP7MaxTree [86]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [95]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [163]
+[87]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z3sqri [87]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [98]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [163]
+[88]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z4kmaxP7MaxTreeiiiii [88]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [99]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [163]
+[89]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z7criaANEv [89]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [93]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [163]
+[90]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8eeImagemRK6Imagem [90]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [97]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [163]
+[91]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z8img2treeRK6ImagemRK12Estruturante [91]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [96]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [163]
+[92]     0.0    0.00    0.00       1         _GLOBAL__sub_I_main [92]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [94]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z7criaANEv [89]
+[93]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [93]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [92]
+[94]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [94]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z18filterSalientPeaksP7MaxTree [86]
+[95]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [95]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z8img2treeRK6ImagemRK12Estruturante [91]
+[96]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [96]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z8eeImagemRK6Imagem [90]
+[97]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [97]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z3sqri [87]
+[98]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [98]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z4kmaxP7MaxTreeiiiii [88]
+[99]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [99]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[100]    0.0    0.00    0.00       1         imLe(char*) [100]
+                0.00    0.00       1/1           Imagem::Imagem(char*) [105]
+-----------------------------------------------
+                0.00    0.00       1/1           imNormaliza(Imagem const&, int const&, int const&) [39]
+[101]    0.0    0.00    0.00       1         imMaximo(Imagem const&) [101]
+-----------------------------------------------
+                0.00    0.00       1/1           imNormaliza(Imagem const&, int const&, int const&) [39]
+[102]    0.0    0.00    0.00       1         imMinimo(Imagem const&) [102]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[103]    0.0    0.00    0.00       1         Imagem::escreve(char*) [103]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[104]    0.0    0.00    0.00       1         Imagem::comoCinza() [104]
+-----------------------------------------------
+                0.00    0.00       1/1           imLe(char*) [100]
+[105]    0.0    0.00    0.00       1         Imagem::Imagem(char*) [105]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [86] _GLOBAL__sub_I__Z18filterSalientPeaksP7MaxTree [101] imMaximo(Imagem const&) [83] Grafo::getOrdem()
+  [87] _GLOBAL__sub_I__Z3sqri [102] imMinimo(Imagem const&) [66] Grafo::getRotulo()
+  [88] _GLOBAL__sub_I__Z4kmaxP7MaxTreeiiiii [34] img2tree(Imagem const&, Estruturante const&) [75] Grafo::Grafo()
+  [89] _GLOBAL__sub_I__Z7criaANEv [3] isCircle(Imagem const&, int, int) [50] Pilha::inserirNaPilha(int, int, int)
+  [90] _GLOBAL__sub_I__Z8eeImagemRK6Imagem [70] criaNoANE(Registro) [51] Pilha::removerDaPilha()
+  [91] _GLOBAL__sub_I__Z8img2treeRK6ImagemRK12Estruturante [12] eeReflete(Estruturante const&) [52] Pilha::getPx()
+  [92] _GLOBAL__sub_I_main    [21] imNaozero(Imagem const&) [53] Pilha::getPy()
+  [63] ehVaziaANE(ANE*)       [31] imSubtrai(Imagem const&, Imagem const&) [28] Imagem::zera()
+  [20] imCentroide(Imagem const&) [71] insereANE(ANE*, Registro, int*) [103] Imagem::escreve(char*)
+  [32] imConstante(int const&, int const&, int const&, int const&, int const&) [25] Vizinhanca::getX() [104] Imagem::comoCinza()
+   [4] imGradiente(Imagem const&, Estruturante const&, Estruturante const&) [26] Vizinhanca::getY() [105] Imagem::Imagem(char*)
+  [39] imNormaliza(Imagem const&, int const&, int const&) [47] Vizinhanca::inserir(int, int) [7] Imagem::Imagem(int const&, int const&, int const&, int const&, int const&)
+   [2] searchShape(MaxTree*, int, int, int, int, bool (*)(Imagem const&, int, int)) [29] Estruturante::vizX(int const&) [55] Imagem::~Imagem()
+  [30] imMultiplica(Imagem const&, int const&) [14] Estruturante::vizY(int const&) [13] Imagem::operator=(Imagem const&)
+  [33] imMultiplica(Imagem const&, Imagem const&) [9] Estruturante::imagem(Imagem const&) [23] Pontos::getX(int const&)
+  [93] __static_initialization_and_destruction_0(int, int) [65] Estruturante::destroi() [24] Pontos::getY(int const&)
+  [94] __static_initialization_and_destruction_0(int, int) [18] Estruturante::Estruturante(char*, int const&) [54] Pontos::insere(int const&, int const&)
+  [95] __static_initialization_and_destruction_0(int, int) [17] Estruturante::Estruturante(Imagem const&) [56] Pontos::Pontos(int const&)
+  [96] __static_initialization_and_destruction_0(int, int) [57] Fila::removeDaFila() [69] Pontos::~Pontos()
+  [97] __static_initialization_and_destruction_0(int, int) [27] Fila::getPx() [84] MaxTree::retornaAltura()
+  [98] __static_initialization_and_destruction_0(int, int) [46] Fila::getPy() [8] MaxTree::retornaRegiao(int, int, Imagem*)
+  [99] __static_initialization_and_destruction_0(int, int) [58] Fila::setPx(int) [85] MaxTree::retornaLargura()
+ [100] imLe(char*)            [59] Fila::setPy(int)       [35] MaxTree::flood(int)
+  [19] eeCruz(int const&)     [49] Fila::inserir(int, int, int) [11] MaxTree::vizinhos(Fila*)
+  [10] imArea(Imagem const&)  [60] Fila::getNivel()       [36] MaxTree::MaxTree(int**, int, int, Imagem const&)
+  [16] imNega(Imagem const&)  [61] Fila::setNivel(int)    [76] PilhaNo::desempilha(Grafo**)
+  [80] criaANE()              [72] Grafo::inserirNovo(int, int, ANE**) [77] PilhaNo::empilhaFilhos(Grafo*)
+  [37] eeCaixa(int const&)    [73] Grafo::isOn()          [78] PilhaNo::empilha(Grafo*)
+   [6] imErode(Imagem const&, Estruturante const&) [68] Grafo::buscar(int, int, ANE**) [82] ListaFila::inserirNovo(int, int, int, int)
+  [22] imUniao(Imagem const&, Imagem const&) [81] Grafo::setOff() [38] ListaFila::primeiroDaFila(int)
+  [15] imZeros(int const&, int const&, int const&, int const&) [74] Grafo::inserir(Grafo*, ANE**) [62] ListaFila::inserir(int, int, int, int)
+  [67] buscaANE(ANE*, int, Registro*, int*) [79] Grafo::inserir(int, int, int, int, ANE**) [48] ListaFila::getNivel()
+   [5] imDilata(Imagem const&, Estruturante const&) [64] Grafo::getNivel()

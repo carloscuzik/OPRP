@@ -1,0 +1,7 @@
+./maxtree imgs/halloween-1600x1200.pgm 
+(1200, 1600) pixels=1920000
+Construindo a max-tree... Ok!
+Tempo max-tree: 136.164685
+Qtde nos: 105851
+Qtde deteccao: 2842
+Tempo total: 4500.573689
