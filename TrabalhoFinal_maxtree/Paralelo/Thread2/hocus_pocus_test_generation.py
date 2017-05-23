@@ -23,24 +23,24 @@ def gera_media():
 	return total/repeticoes
 
 img_input = []
-img_input += ["asp75.pgm "]
-img_input += ["asp100.pgm"]
-img_input += ["asp150.pgm"]
-img_input += ["asp200.pgm"]
-img_input += ["asp250.pgm"]
-img_input += ["asp300.pgm"]
-img_input += ["asp350.pgm"]
-img_input += ["asp_500x375.pgm"]
-img_input += ["asp_800x600.pgm"]
-img_input += ["asp_1120X750.pgm"]
-img_input += ["asp_1500x900.pgm"]
+img_input += ["asp75.pgm        "]
+img_input += ["asp100.pgm       "]
+img_input += ["asp150.pgm       "]
+img_input += ["asp200.pgm       "]
+img_input += ["asp250.pgm       "]
+img_input += ["asp300.pgm       "]
+img_input += ["asp350.pgm       "]
+img_input += ["asp_500x375.pgm  "]
+img_input += ["asp_800x600.pgm  "]
+img_input += ["asp_1120X750.pgm "]
+img_input += ["asp_1500x900.pgm "]
 img_input += ["asp_1500x1000.pgm"]
 img_input += ["asp_1800x1000.pgm"]
-img_input += ["aspirina.pgm"]
-img_input += ["aspirina2.pgm"]
-img_input += ["aspirina8.pgm"]
-img_input += ["aspirinaO.pgm"]
-img_input += ["halloween-1600x1200.pgm"]
+img_input += ["aspirina.pgm     "]
+img_input += ["aspirina2.pgm    "]
+img_input += ["aspirina8.pgm    "]
+img_input += ["aspirinaO.pgm    "]
+# img_input += ["halloween-1600x1200.pgm"]
 number_threads = [1,2,4,8,12,16,20,24]
 repeticoes = 10
 
@@ -63,10 +63,14 @@ for i in img_input:
 		if(media<10):
 			print("| M   {0:.6f} ".format(media),end="")
 		else:
-			if(media<100):
-				print("| M  {0:.6f} ".format(media),end="")
-			else:
+			if(media>=100):
 				print("| M {0:.6f} ".format(media),end="")
+			if(media>=100):
+				print("| M  {0:.6f} ".format(media),end="")
+			if(media>=10):
+				print("| M   {0:.6f} ".format(media),end="")
+			else:
+				print("| M    {0:.6f} ".format(media),end="")
 		print("| S {0:.6f}".format(media_single_core/media))
 		arquivo_media.write(str(media)+" ")
 		arquivo_speed.write(str(media_single_core/media)+" ")

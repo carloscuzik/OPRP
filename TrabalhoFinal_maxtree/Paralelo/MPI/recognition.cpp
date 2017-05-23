@@ -17,19 +17,17 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <sys/types.h>
-#include <unistd.h>
-
-
 
 #include "maxtree.h"
 
 
 int sqr(int x) {
 	return x*x;
+}
+
+int number_of_threads;
+void grava_n_threads(int n){
+	number_of_threads = n;
 }
 
 
@@ -61,9 +59,8 @@ bool isCircle(const Imagem& f, int dmin, int dmax) {
 			k++;
 			soma = soma + dist;
 			medio = soma / k;
-			if (abs(dist-medio) > dmax){
+			if (abs(dist-medio) > dmax)
 				return false;
-			}
 		}
 		return true;
 	}
@@ -80,136 +77,73 @@ bool isLine(const Imagem& f, int dmin, int dmax) {
 	//dmin e dmax - sao respectivamente espessura minima e maxima
 	Imagem d = imDistancia(f);
 	int dist = imMaximo(d);
-	if (dist >= dmin && dist <= dmax){
+	if (dist >= dmin && dist <= dmax)
 		return true;
-	}
 	return false;
 }
 /* LINHAS 2 - a entrada jah eh a transformada distancia                    */
 bool isLine2(const Imagem& d, int dmin, int dmax) {
 	//d, dmin e dmax - sao respectivamente transformad distancia, espessura minima e maxima
 	int dist = imMaximo(d);
-	if (dist >= dmin && dist <= dmax){
+	if (dist >= dmin && dist <= dmax)
 		return true;
-	}
 	return false;
 }
 
-int teste = 0;
-// Imagem *g = NULL;
-// Imagem cc  = NULL;
+
+
+/***************************************************************************/
+/* ANALISE DE FORMA                                                        */
+/***************************************************************************/
+
+int dmin;
+int dmax;
+int amin;
+int amax;
+MaxTree *mt;
+Imagem *g;
 PilhaNo **lifo;
-Infos_cons infos;
+int nos_detectados_totais;
 
-Imagem searchShape(MaxTree *mt, int dmin, int dmax, int amin, int amax, bool (*Detecta)(const Imagem& f, int dmin, int dmax)) {
-	clock_t inicio = clock();
-	int i, j, area, areaccaux, cont=0;
+void passe_de_paremetros(MaxTree *mt1, int dmin1, int dmax1, int amin1, int amax1, Imagem *g_l, PilhaNo **lifo_l){
+	dmin = dmin1;
+	dmax = dmax1;
+	amin = amin1;
+	amax = amax1;
+	mt = mt1;
+	g = g_l;
+	lifo = lifo_l;
+	nos_detectados_totais = 0;
+}
+
+void *searchShape(void *arg){
+	int numero_da_thread_atal = (int&) arg;
+	
+	// printf("processo: %i\n",numero_da_thread_atal);
+	int i, area, areaccaux, nos_detectados_locais=0;
 	Grafo *aux = mt->grafo;
-	Imagem g = imZeros(mt->retornaAltura(), mt->retornaLargura(), 1, INTEIRA);
-	
-	PilhaNo *lifo_aux = NULL;
-	lifo_aux = lifo_aux->empilha(aux);
-	
-
-	int number_of_threads = 1;
-	PilhaNo *a[number_of_threads];
-	lifo = a;
-	int k=0;
-	for(i=0;i<number_of_threads;i++){
-		lifo[i]=NULL;
-	}
-	//coloca todos os nos da arvore em uma pilha
-	while(lifo_aux){
-		if(k==number_of_threads){
-			k=0;
-		}
-		cont++;
-		lifo_aux = lifo_aux->desempilha(&aux);
-		lifo[k] = lifo[k]->empilha(aux);
-		lifo_aux = lifo_aux->empilhaFilhos(aux);
-		if (aux->filho != NULL){
-			aux = aux->filho;
-		}
-		k++;
-	}
-	//armazena informações para o consumidor
-	infos.dmin = dmin;
-	infos.dmax = dmax;
-	infos.amin = amin;
-	infos.amax = amax;
-	infos.Detecta = Detecta;
-	infos.mt = mt;
-	infos.g = &g;
-	// começa a inicializar as threads
-	pthread_t cons[number_of_threads]; // cria as threads
-	int rc;
-	for(i=0;i<number_of_threads;i++){
-		rc = pthread_create(&cons[i], NULL, consumidor,(void *)(intptr_t)i);
-	}
-	for(i=0;i<number_of_threads;i++){
-		rc = pthread_join(cons[i], NULL);
-	}
-
-	// single core >>
-	// int asd;
-	// consumidor((void*)asd);
-	clock_t fim = clock();
-	printf("\nTempo searchShape: %f\n", (fim-inicio)/(1.*CLK_TCK));
-	printf("Qtde nos: %d\n", cont);
-	printf("Qtde deteccao: %d", teste);
-	return g;
-}
-
-pthread_mutex_t mtx_des = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t mtx1 = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t mtx2 = PTHREAD_MUTEX_INITIALIZER;
-
-void *consumidor(void *a){
-	int k = (intptr_t) a;
-	int area;
-	int detec_pos = 0;
-	Grafo *aux;
-	int asd = 0;
-	Imagem g_local = imZeros(infos.mt->retornaAltura(), infos.mt->retornaLargura(), 1, INTEIRA);
-	Imagem cc = imZeros(infos.mt->retornaAltura(), infos.mt->retornaLargura(), 1, INTEIRA);  // imagem com zeros
-	clock_t inicio, fim;
-	double t_des = 0;
-	double t_uni = 0;
-	while(lifo[k]){
-		lifo[k] = lifo[k]->desempilha(&(aux));
-		if(aux->isOn()) {
-			cc.zera();
-			inicio = clock();
-			infos.mt->retornaRegiao(aux->getNivel(), aux->getRotulo(), &cc);
-			area = imArea(cc);
-			fim = clock();
-			t_des += (fim-inicio)/(1.*CLK_TCK);
-			inicio = clock();
-			if (area >= infos.amin && area <= infos.amax){
-				if (infos.Detecta(cc,infos.dmin,infos.dmax)){
-					detec_pos++;
-					cc = imMultiplica(cc, aux->getNivel());
-					g_local = imUniao(g_local,cc);
-				}
-				else{
-					aux->setOff();
-				}
-			}else{
-				aux->setOff();
+	Imagem g_l   = imZeros(mt->retornaAltura(), mt->retornaLargura(), 1, INTEIRA);  // imagem com zeros
+	Imagem cc   = imZeros(mt->retornaAltura(), mt->retornaLargura(), 1, INTEIRA);  // imagem com zeros
+	while (lifo[numero_da_thread_atal]) {
+		lifo[numero_da_thread_atal] = lifo[numero_da_thread_atal]->desempilha(&aux);
+		cc.zera();
+		mt->retornaRegiao(aux->getNivel(), aux->getRotulo(), &cc);
+		area = imArea(cc);
+		if (area >= amin && area <= amax) {
+		    if (isCircle(cc,dmin,dmax)) {
+				nos_detectados_locais++;
+				cc = imMultiplica(cc, aux->getNivel());
+				g_l = imUniao(g_l, cc);
 			}
-			fim = clock();
-			t_uni += (fim-inicio)/(1.*CLK_TCK);
 		}
 	}
-	printf("Tempo thread %i des: %f\n", k, t_des);
-	printf("Tempo thread %i uni: %f\n", k, t_uni);
-	// inicio = clock();
-	pthread_mutex_lock(&mtx1);
-		teste += detec_pos;
-	pthread_mutex_unlock(&mtx1);
-	pthread_mutex_lock(&mtx2);
-		*(infos.g) = imUniao(*(infos.g),g_local);
-	pthread_mutex_unlock(&mtx2);
-	// fim = clock();
-	// printf("Tempo thread %i c: %f\n", k, (fim-inicio)/(1.*CLK_TCK));
+	nos_detectados_totais += nos_detectados_locais;
+	*(g) = imUniao(*g,g_l);
 }
+
+void imprime_numero_de_nos_detectados(){
+	printf("Qtde deteccao: %i\n", nos_detectados_totais);
+}	
+
+
+void *consumidor(void *arg){}
