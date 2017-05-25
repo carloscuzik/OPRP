@@ -41,7 +41,7 @@ img_input += ["aspirina2.pgm    "]
 img_input += ["aspirina8.pgm    "]
 img_input += ["aspirinaO.pgm    "]
 # img_input += ["halloween-1600x1200.pgm"]
-number_threads = [1,2,4,8,12,16,20,24]
+number_threads = [1,2,4,8,12,16,20]
 repeticoes = 10
 
 media_single_core = 0

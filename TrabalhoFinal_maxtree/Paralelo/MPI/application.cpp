@@ -19,7 +19,9 @@ int main(int argc, char **argv) {
 		arq = argv[1];
 	}
 	FILE* out;
+	FILE* out_log;
 	out = fopen("result.txt","a");
+	out_log = fopen("result2.txt","a");
 	Imagem f = imLe(arq);
 	int N = f.altura * f.largura;
     gettimeofday(&ini, NULL);
@@ -59,16 +61,10 @@ int main(int argc, char **argv) {
 		k++;
 	}
 
-
 	Imagem g = imZeros(mt->retornaAltura(), mt->retornaLargura(), 1, INTEIRA);
 	passe_de_paremetros(mt, -1, 20, 50, N, &g, lifo);
 	
 	searchShape((void *)rank);
-
-	// MPI_Datatype datatype;
-	// MPI_Type_contiguous(sizeof(Imagem), MPI_BYTE, &datatype);
-	// MPI_Type_commit(&datatype);
-
 
 	if(rank==0){
 		Imagem g_recebido = imZeros(mt->retornaAltura(), mt->retornaLargura(), 1, INTEIRA);
@@ -94,13 +90,21 @@ int main(int argc, char **argv) {
 		
 		gettimeofday(&final, NULL);
 		tempo_real = (1 * (final.tv_sec - ini.tv_sec) + (final.tv_usec - ini.tv_usec) / 1000000.0);
-	    if(tempo_real<100){
-	    	printf("  ");
-	    }else if(tempo_real<10){
+	    if(tempo_real>=1000){
+	    	// printf("");
+	    }else if(tempo_real>=100){
 	    	printf(" ");
+	    	fprintf(out_log," ");
+	    }else if(tempo_real>=10){
+	    	printf("  ");
+	    	fprintf(out_log,"  ");
+	    }else{
+	    	printf("   ");
+	    	fprintf(out_log,"   ");
 	    }
 	    printf("%.4lf ",tempo_real);
 	    fprintf(out,"%lf ",tempo_real);
+	    fprintf(out_log,"%.3lf ",tempo_real);
 	}else{
 		MPI_Send(&g.bits,1,MPI_INT,0,0,MPI_COMM_WORLD);
 		MPI_Send(g.formato,3,MPI_CHAR,0,0,MPI_COMM_WORLD);

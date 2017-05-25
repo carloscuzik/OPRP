@@ -1,4 +1,4 @@
-CC = g++
+CC = mpic++
 INCDIR = .
 LIBDIR = .
 CFLAGS = -Wno-write-strings -pg -O3 -pthread
