@@ -3,6 +3,10 @@
 import sys
 import os
 from subprocess import call
+from datetime import datetime
+
+data = datetime.now()
+nome_result = str(data.day) + "-" + str(data.month) + "-" + str(data.year) + "-" + str(data.hour) + "-" + str(data.minute) + "-" + str(data.second)
 
 if(os.path.isfile("result.txt")):
 	os.remove("result.txt")
@@ -36,18 +40,14 @@ img_input += ["asp_1120X750.pgm "]
 img_input += ["asp_1500x900.pgm "]
 img_input += ["asp_1500x1000.pgm"]
 img_input += ["asp_1800x1000.pgm"]
-img_input += ["aspirina.pgm     "]
-img_input += ["aspirina2.pgm    "]
-img_input += ["aspirina8.pgm    "]
-img_input += ["aspirinaO.pgm    "]
-# img_input += ["halloween-1600x1200.pgm"]
+
 number_threads = [1,2,4,8,12,16,20]
 repeticoes = 10
 
 media_single_core = 0
 
-arquivo_media = open("media_result","w")
-arquivo_speed = open("speed_result","w")
+arquivo_media = open("media_result" + nome_result,"w")
+arquivo_speed = open("speed_result" + nome_result,"w")
 
 for i in img_input:
 	for j in number_threads:
