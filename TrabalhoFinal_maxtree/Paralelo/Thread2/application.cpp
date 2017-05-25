@@ -91,7 +91,6 @@ int main(int argc, char **argv) {
 	// printf("\nTempo total errado: %f\n", (fim-inicio)/(CLOCKS_PER_SEC/1.0));
 	tempo_real = (1 * (final.tv_sec - ini.tv_sec) + (final.tv_usec - ini.tv_usec) / 1000000.0);
     // printf("tempo: %lf segundos\n",tempo_real);
-    tempo_real = 1101;
     if(tempo_real>=1000){
     	printf("");
     }else if(tempo_real>=100){
