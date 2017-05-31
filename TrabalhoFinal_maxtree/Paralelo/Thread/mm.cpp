@@ -471,9 +471,8 @@ bool imSaoiguais(const Imagem& f1, const Imagem& f2) {
 	int i, j;
 	for (i=0; i<f1.altura; i++)
 		for (j=0; j<f1.largura; j++)
-			if (f1.matriz[i][j] != f2.matriz[i][j]){
+			if (f1.matriz[i][j] != f2.matriz[i][j])
 				return false;
-			}
 	return true;
 }
 

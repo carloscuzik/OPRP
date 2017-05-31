@@ -23,14 +23,14 @@
 
 
 MaxTree *img2tree(const Imagem& f, const Estruturante& se) {
-	clock_t inicio = clock();	
-	printf("Construindo a max-tree... ");
+	// clock_t inicio = clock();	
+	// printf("Construindo a max-tree... ");
 
 	MaxTree *mt = new MaxTree(se.img->matriz, se.img->altura, se.img->largura, f);
 
-	printf("Ok!\n");
-	clock_t fim = clock();
-	printf("Tempo max-tree: %f\n", (fim-inicio)/(1.*CLK_TCK));
+	// printf("Ok!\n");
+	// clock_t fim = clock();
+	// printf("Tempo max-tree: %f\n", (fim-inicio)/(1.*CLK_TCK));
 	return mt;
 }
 

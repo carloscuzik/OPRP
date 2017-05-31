@@ -22,7 +22,6 @@
 
 
 Imagem kmax(MaxTree *mt, int kup, int kdown, int max_dif_level, int amin, int amax) {
-	printf("entrando kmax\n");
 	int i, j, level_pre, level_pos;
 	bool CONT;
 	Folhas *leaves = mt->retornaFolhas();
@@ -70,7 +69,6 @@ Imagem kmax(MaxTree *mt, int kup, int kdown, int max_dif_level, int amin, int am
 		}
 		leaf = leaf->proximo;
 	}
-	printf("saindo kmax\n");
 	return g;
 }
 
