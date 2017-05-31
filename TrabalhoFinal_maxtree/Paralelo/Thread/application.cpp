@@ -32,9 +32,9 @@ int main(int argc, char **argv) {
 	Imagem g = imZeros(f.altura, f.largura, 1, INTEIRA);
 	passe_de_paremetros(-1, 20, 50, N, &g, &f);
 	
-	// if(number_threads==1){
-		// searchShape((void *)0);
-	// }else{
+	if(number_threads==1){
+		searchShape((void *)0);
+	}else{
 		pthread_t cons[number_threads]; // cria as threads
 		int rc;
 		for(i=0;i<number_threads;i++){
@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
 		for(i=0;i<number_threads;i++){
 			rc = pthread_join(cons[i], NULL);
 		}
-	// }
+	}
 	g = imNormaliza(g,0,255);
 	g.comoCinza();
 	g.escreve("imgs/out.pgm");
