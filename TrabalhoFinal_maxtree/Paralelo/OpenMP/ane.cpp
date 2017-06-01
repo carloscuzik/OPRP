@@ -85,9 +85,8 @@ int insereANE(pANE pd, Registro x, int *comparacoes) {
 		p = p->filho[resto];
 		nivel++;
 	}
-	if (p != NULL){
+	if (p != NULL) /* chave jah existente */
 		return FRACASSO;
-	}
 	ppai->filho[resto] = criaNoANE(x);
 	return SUCESSO;
 }
@@ -113,9 +112,8 @@ void percursoANE(pNoANE p) {
 int buscaANE(pANE pd, int x, Registro *r, int *comparacoes) {
 	int chave, divisor, resto, CONTINUA = SIM, nivel = 0;
 	pNoANE p = pd->raiz, ppai = NULL;
-	if (ehVaziaANE(pd)){
+	if (ehVaziaANE(pd))
 		return FRACASSO;
-	}
 	while (p != NULL  &&  p->info.chave != x) {
 		(*comparacoes)++;
 		ppai = p;

@@ -1,7 +1,7 @@
 CC = g++
 INCDIR = .
 LIBDIR = .
-CFLAGS = -Wno-write-strings -pg -pthread
+CFLAGS = -Wno-write-strings -pg -O3 -fopenmp
 
 SOURCES = \
 	ane.cpp \

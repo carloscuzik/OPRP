@@ -1,47 +1,60 @@
-/***************************************************************************
- *   Copyright (C) 2006 by Alexandre Gonçalves Silva                       *
- *   alexandre@joinville.udesc.br                                          *
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- *   This program is distributed in the hope that it will be useful,       *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- *   GNU General Public License for more details.                          *
- *                                                                         *
- *   You should have received a copy of the GNU General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
- ***************************************************************************/
-
 #include "maxtree.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <pthread.h>
 #include <sys/types.h>
 #include <unistd.h>
-
+#include <time.h>
+#include <sys/time.h>
 
 int main(int argc, char **argv) {
-	char *arq = "imgs/asp75.pgm";
-	if (argv[1]){
-		arq = argv[1];
+	struct timeval ini, final;
+    double tempo_real;
+    gettimeofday(&ini, NULL);
+	char *arq = "imgs/asp150.pgm";
+	int number_threads, i;
+	if(argc!=2 && argc!=3){
+		printf("Falta algum arguento ai FERA ;-)\n");
+		return -1;
 	}
+	if(argc == 2){
+		number_threads = atoi(argv[1]);
+	}
+	if(argc == 3){
+		number_threads = atoi(argv[1]);
+		arq = argv[2];
+	}
+	FILE* out;
+	out = fopen("result.txt","a");
+	grava_n_threads(number_threads);
 	Imagem f = imLe(arq);
 	int N = f.altura * f.largura;
-	printf("(%d, %d) pixels=%d\n", f.altura, f.largura, f.altura*f.largura);
-	clock_t inicio = clock();
-	MaxTree *mt = img2tree(f, eeCaixa());
-	Imagem g = searchShape(mt, -1, 20, 50, N, isCircle);
+	Imagem g = imZeros(f.altura, f.largura, 1, INTEIRA);
+	passe_de_paremetros(-1, 20, 50, N, &g, &f);
+	
+	if(number_threads==1){
+		searchShape((void *)0);
+	}else{
+		#pragma omp parallel for num_threads(number_threads)
+		for(i=0;i<number_threads;i++){
+			// printf("%i\n",i);
+			searchShape((void *)i);
+		}
+	}
 	g = imNormaliza(g,0,255);
 	g.comoCinza();
 	g.escreve("imgs/out.pgm");
-	clock_t fim = clock();
-	printf("\nTempo total: %f\n", (fim-inicio)/(1.*CLK_TCK));
+	gettimeofday(&final, NULL);
+	tempo_real = (1 * (final.tv_sec - ini.tv_sec) + (final.tv_usec - ini.tv_usec) / 1000000.0);
+    if(tempo_real>=1000){
+    	printf("");
+    }else if(tempo_real>=100){
+    	printf(" ");
+    }else if(tempo_real>=10){
+    	printf("  ");
+    }else{
+    	printf("   ");
+    }
+    printf("%.4lf ",tempo_real);
+    fprintf(out,"%lf ",tempo_real);
 	return 0;
 }
-

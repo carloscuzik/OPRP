@@ -17,13 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <sys/types.h>
-#include <unistd.h>
 
-
+#include <omp.h>
 #include "mm.h"
 #define CLK_TCK CLOCKS_PER_SEC
 
@@ -796,24 +791,16 @@ Imagem regionsFromTwoMarkers(MaxTree *mt, Pontos m1, Pontos m2);
 
 
 //----------------- RECOGNITION FUNCTIONS ------------------
-typedef struct infos_cons{
-	int dmin;
-	int dmax;
-	int amin;
-	int amax;
-	bool (*Detecta)(const Imagem& f, int dmin, int dmax);
-	PilhaNo *lifo;
-	MaxTree *mt;
-	Imagem *g;
-}Infos_cons;
-
 bool isArch(const Imagem& f, int dmin, int dmax);
 bool isCircle(const Imagem& f, int dmin, int dmax);
 bool isEllipse(const Imagem& f, int dmin, int dmax);
 bool isLine(const Imagem& f, int dmin, int dmax);
 bool isStraightLine(const Imagem& f, int dmin, int dmax);
-Imagem searchShape(MaxTree *mt, int dmin, int dmax, int amin, int amax, bool (*Detecta)(const Imagem& f, int dmin, int dmax));
-void *consumidor(void *a);
+void *searchShape(void *arg);
+void grava_n_threads(int n);
+void *consumidor(void *arg);
+void passe_de_paremetros(int dmin1, int dmax1, int amin1, int amax1, Imagem *g_l, Imagem *f_l);
+void imprime_numero_de_nos_detectados();
 
 //----------------- CLASSIFICATION FUNCTIONS ------------------
 int *maxHistogram(MaxTree *mt, int (*Statistic)(const Imagem& f, int dmin, int dmax), int *ha=NULL, int *hp=NULL, int *hg=NULL, int *hn=NULL);

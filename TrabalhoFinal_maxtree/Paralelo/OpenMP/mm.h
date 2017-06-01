@@ -21,13 +21,8 @@
 #include <iostream>
 #include <string.h>
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <pthread.h>
-#include <sys/types.h>
-#include <sys/times.h>
-#include <sys/wait.h>
+#include <math.h>
 //#include "morph4cpp.h"
 
 #define BINARIA  1
