@@ -114,6 +114,8 @@ void passe_de_paremetros(int dmin1, int dmax1, int amin1, int amax1, Imagem *g_l
 	nos_detectados_totais = 0;
 }
 
+pthread_mutex_t mtx; 
+
 void *searchShape(void *arg){
 	int numero_da_thread_atal = (int&) arg;
 	
@@ -156,8 +158,10 @@ void *searchShape(void *arg){
 			}
 		}
 	}
-	nos_detectados_totais += nos_detectados_locais;
-	*(g) = imUniao(*g,g_l);
+	pthread_mutex_lock(&mtx);
+		nos_detectados_totais += nos_detectados_locais;
+		*(g) = imUniao(*g,g_l);
+	pthread_mutex_unlock(&mtx);
 }
 
 void imprime_numero_de_nos_detectados(){
